@@ -1,0 +1,21 @@
+# A name for your workflow
+name: CI
+
+# This tells the workflow to run on every 'push'
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+# This is where the actual work happens
+jobs:
+  build:
+    # This job will run on a new virtual computer (Ubuntu)
+    runs-on: ubuntu-latest
+
+    # These are the steps the job will take
+    steps:
+      # This step just prints "Hello world" to the log
+      - name: Run a one-line script
+        run: echo "Hello, world!"
